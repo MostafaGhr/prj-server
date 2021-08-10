@@ -14,7 +14,7 @@ class CanView(generics.ListAPIView):
 class CanDetailView(generics.RetrieveAPIView):
     queryset = Can.objects.all()
     serializer_class = serializers.CanDetail
-    
+
 
 class OccupancyView(generics.ListAPIView):
     queryset = Occupancy.objects.all()

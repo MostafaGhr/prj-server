@@ -11,7 +11,7 @@ class CanList(serializers.ModelSerializer):
 class CanDetail(serializers.ModelSerializer):
     class Meta:
         model = Can
-        fields = ['address', 'identifier', 'volume', 'pk', 'current_percent']
+        fields = ['address', 'identifier', 'volume', 'pk', 'current_percent', 'door_counter']
 
 
 class OccupancyList(serializers.ModelSerializer):
