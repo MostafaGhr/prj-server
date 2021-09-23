@@ -6,19 +6,15 @@ class CanList(serializers.ModelSerializer):
         model = Can
         fields = ['address', 'identifier', 'volume', 'pk']
 
-
-
 class CanDetail(serializers.ModelSerializer):
     class Meta:
         model = Can
         fields = ['address', 'identifier', 'volume', 'pk', 'current_percent', 'door_counter']
 
-
 class OccupancyList(serializers.ModelSerializer):
     class Meta:
         model = Occupancy
         fields = ['time', 'percentage']
-
 
 class CanOccupancyTrace(serializers.ModelSerializer):
     occupancy_set = OccupancyList(many=True)
